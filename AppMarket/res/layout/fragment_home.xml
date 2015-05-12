@@ -1,0 +1,20 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_actionbar" />
+
+<!--     <com.witskies.appmarket.widgets.PagerSlidingTabStrip -->
+<!--         android:id="@+id/fragment_home_indicator" -->
+<!--         android:layout_width="match_parent" -->
+<!--         android:layout_height="28dp" > -->
+<!--     </com.witskies.appmarket.widgets.PagerSlidingTabStrip> -->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/fragment_home_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>
