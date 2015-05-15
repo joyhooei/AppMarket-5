@@ -6,9 +6,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTabHost;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TabHost.TabSpec;
 import android.widget.TextView;
 
@@ -18,7 +16,6 @@ import com.witskies.appmarket.fragment.GameFragment;
 import com.witskies.appmarket.fragment.HomeFragment;
 import com.witskies.appmarket.fragment.ManagerFragment;
 import com.witskies.appmarket.fragment.SoftFragment;
-import com.witskies.appmarket.util.ToastUtils;
 
 public class MainActivity extends FragmentActivity {
 	/**
@@ -55,7 +52,7 @@ public class MainActivity extends FragmentActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.activity_main1);
 		initViews();
 	}
 

@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <com.witskies.appmarket.widgets.DragTopLayout
+            android:id="@+id/activity_appinfo_draglayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <!-- top view -->
+
+            <LinearLayout
+                android:id="@+id/activity_appinfo_topview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/activity_appinfo_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="40dp"
+                    android:text="Top View"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/activity_appinfo_imageview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:src="@drawable/ic_launcher" />
+            </LinearLayout>
+
+            <!-- content view -->
+
+            <LinearLayout
+                android:id="@+id/activity_appinfo_contentview"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/activity_appinfo_topview"
+                android:orientation="vertical" >
+
+                <com.witskies.appmarket.widgets.PagerSlidingTabStrip
+                    android:id="@+id/activity_appinfo_indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/activity_appinfo_viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                </android.support.v4.view.ViewPager>
+            </LinearLayout>
+        </com.witskies.appmarket.widgets.DragTopLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/bottombar_bg"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/activity_appinfo_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下载" 
+                android:minWidth="100dp"
+                android:textColor="#ffffff"
+                android:background="@drawable/ui_btn_bg" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

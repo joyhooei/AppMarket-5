@@ -1,13 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="50dp"
+    android:layout_height="wrap_content"
     android:gravity="center"
     android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/item_choice_listview_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="15dp" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/item_choice_listview_categroy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="你爱的游戏都在这里" />
+
+            <TextView
+                android:id="@+id/item_choice_listview_introduce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="你爱的游戏都在这里"
+                android:textColor="#666666" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/item_choice_listview_scanall"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="查看全部" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp" android:descendantFocusability= "blocksDescendants">
+
+        <ImageView
+            android:id="@+id/item_choice_listview_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/qvod_icon" />
+
+        <TextView
+            android:id="@+id/item_choice_listview_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/item_choice_listview_icon"
+            android:text="快播" />
+
+        <TextView
+            android:id="@+id/item_choice_listview_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_choice_listview_name"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/item_choice_listview_icon"
+            android:text="100万次下载"
+            android:textColor="#666666" />
+
+        <TextView
+            android:id="@+id/item_choice_listview_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_choice_listview_count"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/item_choice_listview_icon"
+            android:text="好玩的应用" />
+
+        <TextView
+            android:id="@+id/item_choice_listview_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/item_choice_listview_count"
+            android:text="300M"
+            android:textColor="#666666" />
+
+        <Button
+            android:id="@+id/item_choice_listview_down"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ui_btn_bg"
+            android:text="下载" android:focusable = "false"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
 
 </LinearLayout>

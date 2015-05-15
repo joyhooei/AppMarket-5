@@ -3,6 +3,7 @@ package com.witskies.appmarket.fragment;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
@@ -10,15 +11,20 @@ import android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
 import com.witskies.appmarket.R;
+import com.witskies.appmarket.activity.AppInfoActivity;
 import com.witskies.appmarket.adapter.ChoiceListviewAdapter;
 import com.witskies.appmarket.widgets.CustomSwipeToRefresh;
+
 /**
  * 精选
+ * 
  * @author Clance
- *
+ * 
  */
 public class ChoiceFragment extends Fragment {
 	private List<String> mAdUris;
@@ -55,8 +61,9 @@ public class ChoiceFragment extends Fragment {
 		}
 		mRefreshLayout = (CustomSwipeToRefresh) getActivity().findViewById(R.id.fragment_choice_refreshlayout);
 		// 设置刷新时动画的颜色，可以设置4个
-//		mRefreshLayout.setColorSchemeResources(android.R.color.holo_blue_light, android.R.color.holo_red_light, android.R.color.holo_orange_light,
-//				android.R.color.holo_green_light);
+		// mRefreshLayout.setColorSchemeResources(android.R.color.holo_blue_light,
+		// android.R.color.holo_red_light, android.R.color.holo_orange_light,
+		// android.R.color.holo_green_light);
 		mRefreshLayout.setOnRefreshListener(new OnRefreshListener() {
 
 			@Override
@@ -76,6 +83,13 @@ public class ChoiceFragment extends Fragment {
 		mAdapter = new ChoiceListviewAdapter(mDatas, mAdUris, getActivity());
 		mListView = (ListView) getActivity().findViewById(R.id.fragment_choice_listview);
 		mListView.setAdapter(mAdapter);
+		mListView.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+				startActivity(new Intent(getActivity(), AppInfoActivity.class));
+			}
+		});
 
 	}
 }

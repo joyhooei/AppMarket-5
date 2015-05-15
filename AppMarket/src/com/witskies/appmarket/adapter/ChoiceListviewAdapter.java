@@ -91,7 +91,7 @@ public class ChoiceListviewAdapter extends BaseAdapter {
 			case TYPE_2:
 				holder2 = new ViewHolder2();
 				convertView = LayoutInflater.from(mContext).inflate(R.layout.item_choice_listview, null);
-				holder2.textView = (TextView) convertView.findViewById(R.id.item_choice_listview_text);
+				holder2.textView = (TextView) convertView.findViewById(R.id.item_choice_listview_categroy);
 				convertView.setTag(holder2);
 				break;
 			}
